@@ -1,55 +1,52 @@
 package media;
 
 public class Television {
-
+    
     private int volume;
     private int currentProgram;
     private boolean isTurnedOn;
-
-    public Television() {
-        this.volume = 0;
-        this.currentProgram = 1;
-        this.isTurnedOn = false;
-
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public int getCurrentProgram() {
-        return currentProgram;
-    }
-
-    public boolean isTurnedOn() {
-        return isTurnedOn;
-    }
-
+    
     public void setVolume(int volume) {
         this.volume = volume;
     }
-
-    public void setCurrentProgram(int currentProgram) {
-        this.currentProgram = currentProgram;
+    
+    public int getVolume() {
+        return this.volume;
     }
-
-    public void setisTurnedOn(boolean isTurnedOn) {
+    
+    public void setCurrentProgram(int program) {
+        this.currentProgram = program;
+    }
+    
+    public int getCurrentProgram() {
+        return this.currentProgram;
+    }
+    
+    public void setIsTurnedOn(boolean isTurnedOn) {
         this.isTurnedOn = isTurnedOn;
     }
-
+    
+    public boolean getIsTurnedOn() {
+        return this.isTurnedOn;
+    }
+    
+    public Television() {
+        this.currentProgram = 1;
+        this.isTurnedOn = false;
+        this.volume = 0;
+    }
+    
     public Television(int program, boolean isTurnedOn, int volume) {
         this.currentProgram = program;
         this.isTurnedOn = isTurnedOn;
         this.volume = volume;
-
     }
-
+    
     public void info() {
+        System.out.println("Uključen: " + this.isTurnedOn);
+        System.out.println("Zvuk je na: " + this.volume);
+        System.out.println("Trenutni program: " + this.currentProgram);
         System.out.println("");
-
     }
-
-    public void setIsTurnedOn(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
